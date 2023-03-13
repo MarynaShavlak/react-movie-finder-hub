@@ -19,7 +19,6 @@ import {
 
 export const MovieCard = ({ movieDetails}) => {
   const { title, vote_average, runtime, vote_count, release_date, poster_path, overview, genres } = movieDetails;
-  console.log('vote_average: ', vote_average);
 
   const userScore = vote_average.toFixed(2);
   const releaseYear = release_date !== '' ? new Date(release_date).getFullYear() : null;
