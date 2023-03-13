@@ -19,6 +19,8 @@ import {
 
 export const MovieCard = ({ movieDetails}) => {
   const { title, vote_average, runtime, vote_count, release_date, poster_path, overview, genres } = movieDetails;
+  console.log('vote_average: ', vote_average);
+
   const userScore = vote_average.toFixed(2);
   const releaseYear = release_date !== '' ? new Date(release_date).getFullYear() : null;
   const likes = Math.round(vote_count * vote_average / 10);
@@ -77,13 +79,15 @@ export const MovieCard = ({ movieDetails}) => {
             : <p>There are no details about movie genres</p>
           }
             
+        </div>
+
+        <div>
+          <MovieDesc>Duration</MovieDesc>
+          {runtime
+          ? <span >{getMovieDuration(runtime)}</span>
+          : <p>There are is no info about movie runtime</p>
+          }
           </div>
-        
-          <div>
-            <MovieDesc>Duration</MovieDesc>
-            <span >{getMovieDuration(runtime)}</span>
-          </div>
-        
            <div>
             <MovieDesc>Genres</MovieDesc>
             {genres?.length > 0 

@@ -8,7 +8,7 @@ import { iconSize } from 'constants';
 
 
 export const Pagination = ({totalPages, onPageChange}) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const currentPage = Number(searchParams.get("page")) - 1;
   
 
