@@ -1,0 +1,53 @@
+.pagination-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item {
+  border-radius: 5px;
+}
+
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+    line-height: 1.33;
+    font-weight: 500;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transform: scale(1);
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1), color cubic-bezier(0.4, 0, 0.2, 1);
+}
+  .page-link:hover,
+  .page-link:focus {
+      color: white;
+      background-color: #fc458e;
+  }
+
+.active {
+  background-color: #fc458e;
+  color: white;
+  border-radius: 5px;
+}
+
+
+
+/* 
+.active {
+color: pink;
+} */
